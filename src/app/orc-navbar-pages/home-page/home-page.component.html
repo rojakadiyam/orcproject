@@ -1,0 +1,40 @@
+
+<app-header-page></app-header-page>
+<!---products details-->
+<section>
+    <div class="container">
+      <div class="home-product-details">
+        <div class="home-product-header pt-4">
+          <h5>Recently added books <span class="float-end"><a href="">see all</a></span></h5>
+        </div>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
+          <div class="col mb-4 pt-4" *ngFor="let data of cardData">
+            <div class="card shadow">
+              <img [src]="data.img" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5>{{data.author}}</h5>
+                <p class="card-text">{{data.para}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="home-product-details">
+        <div class="home-product-header pt-4">
+          <h5>Recently added books <span class="float-end"><a href="">see all</a></span></h5>
+        </div>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
+          <div class="col mb-4 pt-4" *ngFor="let data of cardData">
+            <div class="card">
+              <img [src]="data.img" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5>{{data.author}}</h5>
+                <p class="card-text">{{data.para}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
