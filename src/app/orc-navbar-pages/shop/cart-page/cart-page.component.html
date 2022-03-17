@@ -1,0 +1,144 @@
+<app-header-page></app-header-page>
+
+<div *ngIf="show">
+    <div class="container">
+        <div class="cart-table-details">
+            <p class="f-600 pt-5 pb-2 fs-20">Cart Items</p>
+            <div class="table-responsive rounded">
+                <table class="table border-radius border">
+                    <thead class="table-light">
+                        <tr class="cart-table-header">
+                            <th scope="col">Catalog Number</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">Type</th>
+
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let data of tableData" class="cart-table-data">
+                            <td>{{data.name}}</td>
+                            <td>{{data.address}}</td>
+                            <td>{{data.city}}</td>
+                            <td>{{data.state}}</td>
+                            <td><i class="fa fa-trash" data-bs-toggle="modal" data-bs-target="#exampleModal"></i></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="float-end pt-3">
+                    <button class="btn green-bg text-white me-3 px-4" routerLink="/shop">Continue Shopping</button>
+                    <button class="btn green-bg text-white px-4" (click)="successOrder()">Submit Order</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="cart-deliver-details py-5">
+            <p class="fs-20 f-600 pb-3">Deliver to</p>
+
+            <div class="card">
+
+                <div class="card-body">
+                    <div class="row pt-4">
+                        <div class="col-md-10">
+                            <div class="row">
+                                <div class="col-md-4 px-5">
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>Select Student</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-2">
+                                    <p class="f-600 fs-18">Order Address :</p>
+                                </div>
+                                <div class="col-md-3">
+                                    <span class="address fs-14 f-400">Street 1450 E Sumner St
+                                        City/Town Hartford
+                                        State/Province/Region West Virginia
+                                        Zip/Postal Code 53027
+                                        Phone Number (262) 673-4141
+                                    </span>
+
+
+                                    <div class="py-5">
+                                        <button class="btn green-bg text-white px-4">Change</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="col-md-6">
+
+                </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div *ngIf="hide">
+    <div class="container">
+        <div class="card my-5">
+            <div class="card-body">
+                <div class="header-action-phone d-flex justify-content-between">
+                    
+                    <div class="phone">
+                        <!-- <div class="icon">
+                            <img src="assets/images/success.png" />
+                        </div> -->
+                        <span class="name f-500 f-20">Ordered Successfully !</span> <span href="/"
+                            class="f-500  fs-16">Your order has been submitted to ORC for processing</span>
+                    </div>
+                    <div class="float-end" *ngIf="true">
+                        <p>Your order number : 123456</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="table-responsive rounded">
+            <table class="table border-radius border">
+                <thead class="table-light">
+                    <tr class="cart-table-header">
+                        <th scope="col">Order number/date</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Student</th>
+                        <th scope="col">Delivery address</th>
+
+                        <th scope="col">Quantity</th>
+                        <th scope="col">Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr  class="cart-table-data">
+                        <td>#123456
+                            12.03.2022</td>
+                        <td>Description of the book</td>
+                        <td>Jenny Wilson</td>
+                        <td><address>6391 Elgin St. Celina, Delaware 10299</address></td>
+                        <td>1</td>
+                        <td>Consumable</td>
+                    </tr>
+                    <tr  class="cart-table-data">
+                        <td>#123456
+                            12.03.2022</td>
+                        <td>Description of the book</td>
+                        <td>Jenny Wilson</td>
+                        <td><address>6391 Elgin St. Celina, Delaware 10299</address></td>
+                        <td>1</td>
+                        <td>Non-Consumable</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="float-end pt-3">
+            <button class="btn green-bg text-white me-3 px-4" routerLink="/shop"><i
+                    class="fa fa-shopping-cart green-theem me-3"></i>Continue Shopping</button>
+        </div>
+    </div>
+</div>

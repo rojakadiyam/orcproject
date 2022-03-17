@@ -1,2 +1,49 @@
 <app-header-page></app-header-page>
-<p>students works!</p>
+<div class="container py-5">
+    <div class="student-data">
+        <p class="f-500 fs-20">Registration</p>
+        <p class="f-400 fs-14">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in leo viverra sociis
+            adipiscing non quam
+            egestas sit. Pretium lacus accumsan pellentesque sit eget. Sed sed et, cras commodo. Imperdiet sed rutrum
+            massa sollicitudin diam et gravida et pharetra. Pharetra faucibus pulvinar vel vel leo sed pharetra etiam
+            consequat. Augue porttitor nec pellentesque nullam luctus at adipiscing in montes. Libero mollis ultricies
+            amet, nullam eget aenean amet a. Turpis nisl sagittis, duis semper viverra porttitor euismod. Mi purus
+            facilisis massa accumsan aliquet.</p>
+
+        <p class="f-400 fs-14"> At sit molestie vulputate dictum cursus fermentum. Aliquam eu maecenas dolor fringilla
+            commodo tempor
+            egestas. Diam dignissim id egestas quis suspendisse malesuada risus. Felis sed egestas ut ac tempor at
+            viverra. Vivamus tincidunt elit vehicula id morbi ut. Varius egestas vel in tristique. In neque, sit felis
+            gravida commodo.</p>
+        <p class="f-400 fs-14"> Vitae aliquam venenatis, ullamcorper praesent pharetra, vel. In orci morbi vestibulum
+            lectus viverra tempor,
+            augue. Purus turpis nunc volutpat dignissim sed dolor tempor et. Malesuada enim duis nunc, turpis bibendum.
+            Ut egestas elementum et volutpat sociis ac. Rutrum ullamcorper faucibus sed praesent in. Sapien varius
+            lectus arcu amet fermentum lectus ipsum lorem. Tempor bibendum risus fames non non eu vestibulum, lectus.
+            Non pretium ac et consectetur.</p>
+        <div class="f-500 fs-20 pt-5 pb-4">Students</div>
+        <div class="table-responsive rounded scrolling">
+            <table class="table border-radius border">
+                <thead class="table-light">
+                    <tr class="student-table-header">
+                        <th scope="col">First Name</th>
+                        <th scope="col">Last Name</th>
+                        <th scope="col">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let data of studentData" class="student-table-data">
+                        <td class="f-500 fs-14">{{data.name}}</td>
+                        <td class="f-500 fs-14">{{data.name2}}</td>
+                        <td><button class=" new-btn fs-14 f-500">New !</button></td>
+                    </tr>
+                    <tr style="background: #FFECEC;" class="student-table-data">
+                        <td class="f-500 fs-14">Jerome Bell</td>
+                        <td class="f-500 fs-14">Jerome Bell</td>
+                        <td class="fst-italic f-400 fs-14">Need to update</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

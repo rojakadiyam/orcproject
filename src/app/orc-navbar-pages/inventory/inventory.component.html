@@ -1,3 +1,129 @@
 <app-header-page></app-header-page>
-<p>inventory works!</p>
+<div class="container" *ngIf="false">
+    <div class="inventory-table-details">
+        <p class="f-500 pt-5 pb-2">Address</p>
+        <div class="table-responsive rounded">
+            <table class="table border-radius border">
+                <thead class="table-light">
+                    <tr class="inventory-table-header">
+                        <th scope="col">Organization name</th>
+                        <th scope="col">Address</th>
+                        <th scope="col">City</th>
+                        <th scope="col">State</th>
+                        <th scope="col">ZIP</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let data of tableData" class="inventory-table-data">
+                        <td>{{data.name}}</td>
+                        <td>{{data.address}}</td>
+                        <td>{{data.city}}</td>
+                        <td>{{data.state}}</td>
+                        <td>{{data.zip}}</td>
+                        <td><i class="fa fa-pencil" data-bs-toggle="modal" data-bs-target="#exampleModal"></i></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
+        <div class="inventory-link pt-3 pb-5">
+            <span class="click-link f-500 fs-18 blue-clr text-decoration-underline"><a href="/">Alternate Screen For this address</a></span>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<div class="container">
+    <div class="inventory-details d-flex justify-content-between  pt-4 border-bottom pb-2">
+        <div class="de">
+            <p class="fs-18 f-500">Description</p>
+        </div>
+        <div class="inventory-list">
+            <ul>
+                <li class="fs-18 f-500">Student</li>
+                <li class="fs-18 f-500">Ordered Date</li>
+                <li class="fs-18 f-500">Status</li>
+                <li class="fs-18 f-500">Due Date</li>
+            </ul>
+        </div>
+    </div>
+    <div class="inventory-details d-flex justify-content-between  border-bottom " *ngFor="let d of order">
+    <div class="header-action-phone py-4">
+        <div class="icon">
+            <img src="assets/images/bk.png" class="w-100">
+        </div>
+        <div class="phone px-4">
+          <span class="name f-500 fs-16 pb-2">{{d.a1}}</span> <span  class="f-400 fs-16">{{d.a2}}</span>
+        </div>
+      </div>
+      <div class="inventory-list align-self-center">
+        <ul>
+            <li class="fs-16 f-500">{{d.a3}}</li>
+            <li class="fs-16 f-500">{{d.a4}}</li>
+            <li class="fs-16 f-500">{{d.a5}}</li>
+            <li class="red-clr fs-16 f-500">{{d.a6}}</li>
+        </ul>
+    </div>
+    </div>
+</div>
+
+
+
+
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" style="max-width:808px">
+      <div class="modal-content">
+        <div class="modal-header" style="background: #52A077;
+        border: 2px solid #52A077;">
+          <p class="modal-title fs-18 f-600" id="exampleModalLabel" style="
+              line-height: 21px;
+              color: #fff;
+              margin-top: 11px;">Add New Address</p>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+         <div class="row px-5 py-5">
+           <div class="col-md-6 px-4">
+            <div class="mb-4">
+                <input class="form-control form-control" type="text" placeholder="Description / Title:">
+            </div>
+            <div class="mb-4">
+                <input class="form-control form-control" type="text" placeholder="Description / Title:">
+            </div>
+            <div class="mb-4">
+                <input class="form-control form-control" type="text" placeholder="Description / Title:">
+            </div>
+           </div>
+           <div class="col-md-6 px-4">
+            <div class="mb-4">
+                <input class="form-control form-control" type="text" placeholder="Description / Title:">
+            </div>
+            <div class="mb-4">
+                <input class="form-control form-control" type="text" placeholder="Description / Title:">
+            </div>
+            <div class="mb-4">
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Open this select menu</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+            </div>
+           </div>
+           <div class="float-end">
+            <button type="button" class="btn  float-end green-bg text-white me-2 px-4">Create</button>
+          </div>
+         </div>
+        </div>
+       
+      </div>
+    </div>
+  </div>

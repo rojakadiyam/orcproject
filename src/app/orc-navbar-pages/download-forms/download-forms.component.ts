@@ -11,5 +11,12 @@ export class DownloadFormsComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  downloadData=[
+    {dn:'Downloadable form for Student registration'},
+    {dn:'Downloadable form for Student registration'}, {dn:'Downloadable form for Student registration'}, {dn:'Downloadable form for Student registration'},
+    {dn:'Downloadable form for Student registration'}, {dn:'Downloadable form for Student registration'}, {dn:'Downloadable form for Student registration'},
+    {dn:'Downloadable form for Student registration'}, {dn:'Downloadable form for Student registration'}, {dn:'Downloadable form for Student registration'},
+    
+  ]
 
 }

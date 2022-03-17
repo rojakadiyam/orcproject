@@ -1,9 +1,8 @@
-
-.inventory-table-details p {
+.cart-table-details p {
     font-family: 'Poppins', sans-serif;
     font-size: 20px;
 }
-tr.inventory-table-header th {
+tr.cart-table-header th {
     background: #52A077;
     padding: 1rem 0rem 1rem 1rem;
     color: #ffff;
@@ -15,7 +14,7 @@ tr.inventory-table-header th {
 .table> :not(:first-child) {
     border-top: 0;
 }
-tr.inventory-table-data td {
+tr.cart-table-data td {
     padding: 1rem 0rem 1rem 1rem;
     font-family: Roboto;
     font-size: 14px;
@@ -23,13 +22,8 @@ tr.inventory-table-data td {
     line-height: 16px;
 }
 
-.inventory-list ul li {
-    list-style: none;
-    display: inline;
-    padding: 0rem 0rem 0rem 4rem;
-}
 
-@import './../../../variables.scss';
+@import './../../../../variables.scss';
 .header-action-phone {
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -42,20 +36,16 @@ tr.inventory-table-data td {
  .phone {
     color: #333;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 700;
     margin-top: 3px;
-    line-height: 1.4;
+    line-height: 1.6;
     position: relative;
     top: 1px;
-    max-width: 347px;
  }
 .name {
     font-family: 'Roboto';
-    font-size: 12px;
+    font-size: 20px;
     display: block;
     line-height: 1;
     color: $black-color;
 }}
-.red-clr{
-    color: #D93333;
-}

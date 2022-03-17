@@ -1,0 +1,81 @@
+
+<section class="vh-100 login-background-image">
+    <div class="container-fluid h-custom">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-md-9 col-lg-6 col-xl-5 pt-5">
+                <div class="right-login-infomation">
+                    <img src="assets/images/loginlogo.png" class="img-fluid" alt="Sample image">
+                    <p>Washington State School
+                        for the Blind </p>
+                </div>
+                <div class="d-flex justify-content-around pt-4">
+                    <div class="f-400 text-white text-decoration-underline greaterthan" style="cursor: pointer;">Downloadable</div>
+                    <div class="f-400 text-white text-decoration-underline greaterthan" routerLink="/inventory" style="cursor: pointer;">Browsable Resources</div> 
+                </div>
+            </div>
+            <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1 pt-5">
+                <form>
+                    <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
+                        <div class="card shadow-lg" style="max-width: 472px;border-radius: 22px;">
+                            <div class="card-body p-5 justify-content-sm-center h-100">
+                                <div class="phone text-center pb-5">
+                                    <span class="name f-700 green-clr">ORC Online</span> <span
+                                        class="f-400 fs-14 green-clr">Ogden Resource Center's Online Access</span>
+                                </div>
+                                <form [formGroup]='form' method="get">
+                                    <div *ngIf="show">
+                                    <!-- <p>Reset Password</p> -->
+                                    <div class="form-group mb-3">
+                                        <input type="text" formControlName="uname" class="form-control"
+                                            placeholder="User name"
+                                            [ngClass]="{ 'is-invalid': submitted && f?.['uname']?.errors }" />
+                                        <div *ngIf="submitted && f?.['uname']?.errors" class="invalid-feedback">
+                                            <div *ngIf="f?.['uname']?.errors?.['required']">Username is required</div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group mb-3">                                    
+                                        <input type="password" formControlName="pwd" class="form-control"
+                                            placeholder="Password"
+                                            [ngClass]="{ 'is-invalid': submitted && f?.['pwd']?.errors }" />
+                                        <div *ngIf="submitted && f?.['pwd']?.errors" class="invalid-feedback">
+                                            <div *ngIf="f?.['pwd']?.errors?.['required']">Password is required</div>
+
+                                        </div>
+                                    </div>
+                                    <div class="d-grid gap-2 pt-3">
+                                        <!-- <p style="color: red;display: contents;">{{invalidDetails}}</p> -->
+                                        <button class="btn green-bg text-white" (click)='login()'>
+                                            Login
+                                        </button>
+                                        <p class="text-center pt-5 text-decoration-underline blue-clr"><a (click)="forgetpassword()" style="cursor: pointer;">Forget Password ?</a></p>
+                                    </div>
+                                    </div>
+
+                                    <div *ngIf="hide">
+                                        <p>Reset Password</p>
+                                        <div class="form-group mb-3">
+                                            <input type="text"  class="form-control"
+                                                placeholder="New Password"/>
+                                        </div>
+                                        <div class="form-group mb-3">                                    
+                                            <input type="password"  class="form-control"
+                                                placeholder=" Conform Password"/>
+                                        </div>
+                                        <div class="d-grid gap-2 pt-3 pb-5">
+                                            <!-- <p style="color: red;display: contents;">{{invalidDetails}}</p> -->
+                                            <button class="btn green-bg text-white" routerLink="/home">
+                                                Continue
+                                            </button>
+                                
+                                        </div>
+                                        </div>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,19 @@
+
+<app-header-page></app-header-page>
+<div class="container">
+<p class="f-500 fs-20 pt-5">Notifications</p>
+
+<div class="table-responsive rounded pt-3">
+    <table class="table border-radius border">
+        
+        <tbody>
+            <tr  class="cart-table-data" *ngFor="let dt of notification">
+                <td class="py-4"><i class="fa fa-user me-4 green-clr fs-20"></i>
+                    <span class="fs-16 f-700"> {{dt.a1}}</span> <span class="float-end pe-5 fs-18 f-400 ash-clr">Just now</span></td>
+              
+            </tr>
+           
+        </tbody>
+    </table>
+</div>
+</div>

@@ -13,11 +13,11 @@ export class HomePageComponent implements OnInit {
     constructor(){}
   
     cardData=[
-      {img:'https://dummyimage.com/600x400/000/fff.jpg',author:'Author Name',para:'Some quick example text to build on the card title and make up the bulk of the cards content.'},
-      {img:'https://dummyimage.com/600x400/000/fff.jpg',author:'Author Name',para:'Some quick example text to build on the card title and make up the bulk of the cards content.'},
-      {img:'https://dummyimage.com/600x400/000/fff.jpg',author:'Author Name',para:'Some quick example text to build on the card title and make up the bulk of the cards content.'},
-      {img:'https://dummyimage.com/600x400/000/fff.jpg',author:'Author Name',para:'Some quick example text to build on the card title and make up the bulk of the cards content.'},
-      {img:'https://dummyimage.com/600x400/000/fff.jpg',author:'Author Name',para:'Some quick example text to build on the card title and make up the bulk of the cards content.'},
+      {img:'assets/images/book1.png',author:'Author Name',para:'Some quick example text to build on the card title and make up the bulk of the cards content.'},
+      {img:'assets/images/book2.png',author:'Author Name',para:'Some quick example text to build on the card title and make up the bulk of the cards content.'},
+      {img:'assets/images/book3.png',author:'Author Name',para:'Some quick example text to build on the card title and make up the bulk of the cards content.'},
+      {img:'assets/images/book4.png',author:'Author Name',para:'Some quick example text to build on the card title and make up the bulk of the cards content.'},
+      {img:'assets/images/book5.png',author:'Author Name',para:'Some quick example text to build on the card title and make up the bulk of the cards content.'},
        ]
 
   ngOnInit(): void {

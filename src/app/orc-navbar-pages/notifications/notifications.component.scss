@@ -1,0 +1,23 @@
+.cart-table-details p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+}
+tr.cart-table-header th {
+    background: #52A077;
+    padding: 1rem 0rem 1rem 1rem;
+    color: #ffff;
+    font-family: Roboto;
+    font-size: 16px;
+    border: 1px solid #52A077;
+    font-weight: 600;
+}
+.table> :not(:first-child) {
+    border-top: 0;
+}
+tr.cart-table-data td {
+    padding: 1rem 0rem 1rem 1rem;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+}

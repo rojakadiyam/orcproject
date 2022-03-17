@@ -1,32 +1,77 @@
 <div class="">
-    <header class="container d-flex flex-wrap justify-content-center py-2">
+    <header class="container-fluid d-flex flex-wrap justify-content-center py-2 ">
       <a href="/" class="d-flex align-items-center  mb-md-0 me-md-auto text-dark text-decoration-none">
-        <span class="fs-4">ORC Online</span>
+          <img  src="assets/images/logo.png"/>
+        <span class="orc-header green-theem f-700">ORC Online</span>
       </a>
       <ul class="nav nav-pills">
-        <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-map-marker"></i></a></li>
-        <li class="nav-item"><a href="#" class="nav-link ">
-            <div class="g">
-              <h6>Annitt Black</h6>
-              <p>6391 Eligin St. Celine, Delaware 10299</p>
-            </div>
+        <li class="nav-item"><a data-bs-toggle="modal" data-bs-target="#exampleModal" class="nav-link ">
+            <div class="header-action-phone">
+                <div class="icon">
+                    <i class="fa fa-map-marker green-theem"></i>
+                </div>
+                <div class="phone">
+                  <span class="name f-600">Annitt Black</span> <a  class="f-400 ">6391 Eligin St. Celine, Delaware 10299</a>
+                </div>
+              </div>
           </a></li>
-        <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-bell"></i></a></li>
-        <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-shopping-cart"></i></a></li>
-        <li class="nav-item"><a href="#" class="nav-link"><img src="https://github.com/mdo.png" alt="mdo" width="32"
+        <li class="nav-item"><a routerLink="/notifications" class="nav-link mt-2"><i class="fa fa-bell green-theem"></i></a></li>
+        <li class="nav-item"><a href="#" class="nav-link mt-2" routerLink="/cart"><i class="fa fa-shopping-cart green-theem"></i></a></li>
+        <li class="nav-item"><a href="#" class="nav-link mt-1" routerLink="/user"><img src="assets/images/customer.png" alt="mdo"  width="32"
               height="32" class="rounded-circle"></a></li>
       </ul>
     </header>
-    <nav class="py-2 bg-light">
-      <div class="container d-flex flex-wrap">
-        <ul class="nav me-auto">
-          <li class="nav-item me-5 "><a routerLink="/home" class="nav-link link-dark px-2" aria-current="page">Home Page</a></li>
-          <li class="nav-item me-5"><a routerLink="/inventory" class="nav-link link-dark px-2">Your Inventory</a></li>
-          <li class="nav-item me-5"><a routerLink="/students" class="nav-link link-dark px-2">Students</a></li>
-          <li class="nav-item me-5"><a routerLink="/shop" class="nav-link link-dark px-2">Shop</a></li>
-          <li class="nav-item me-5"><a routerLink="/download-forms" class="nav-link link-dark px-2">Downloaded Forms</a></li>
+    <nav class=" navbar navbar-expand-lg py-2 green-bg" style="height: 48px;" *ngIf="true">
+        <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button> -->
+      <div class="container-fluid d-flex flex-wrap collapse navbar-collapse" id="navbarNav">
+        <ul class="nav me-auto nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li class="nav-item me-5"><a routerLink="/home" routerLinkActive="active" class="nav-link  text-white px-2 fs-18 f-400">Home Page</a></li>
+          <li class="nav-item me-5"><a routerLink="/inventory" routerLinkActive="active" class="nav-link text-white  px-2 fs-18 f-400">Your Inventory</a></li>
+          <li class="nav-item me-5"><a routerLink="/students" routerLinkActive="active" class="nav-link text-white  px-2 fs-18 f-400">Students</a></li>
+          <li class="nav-item me-5"><a routerLink="/shop" routerLinkActive="active" class="nav-link text-white  px-2 fs-18 f-400">Shop</a></li>
+          <li class="nav-item me-5"><a routerLink="/download-forms" routerLinkActive="active" class="nav-link text-white  px-2 fs-18 f-400">Downloaded Forms</a></li>
         </ul>
       </div>
     </nav>
   </div>
+
+
+
+
+
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header green-bg text-white">
+        <p class="modal-title fs-18 f-500 my-auto">Select the address</p>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="d-flex justify-content-around border-bottom border-2" *ngFor="let a of lists">
+         <div class="name pt-3 pb-1">
+          <p class="f-600 fs-14">{{a.p1}}</p>
+          <p class="f-400 fs-14">{{a.p2}}</p>
+         </div>
+         <div class="d-flex align-items-center">
+          <div class="round">
+            <input type="checkbox" checked id="checkbox" />
+            <label for="checkbox"></label>
+          </div>
+         </div>
+        </div>
+      </div>
+      <div class="apply-btn text-center pt-2 pb-4">
+        <button type="button" class="btn green-bg text-white px-5">Apply</button>
+       
+      </div>
+    </div>
+  </div>
+</div>
   <router-outlet></router-outlet>

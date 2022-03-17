@@ -1,2 +1,6 @@
 <app-header-page></app-header-page>
-<p>download-forms works!</p>
+<div class="container py-5">
+<div class="border-top" *ngFor="let datas of downloadData">
+    <p class="pt-3 pb-2 blue-clr fs-16 f-500 text-decoration-underline" > <img src="assets/images/download.png" class="pe-3"/> <a href="path/to/file.ext" download rel="noopener noreferrer" target="_blank" class="link-clr">{{datas.dn}}</a></p>
+</div>
+</div>

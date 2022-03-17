@@ -11,5 +11,12 @@ export class StudentsComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  studentData=[
+    {name:'Annette Black',name2:'Annette Black'},
+    {name:'Marvin McKinney',name2:'Annette Black'},
+    {name:'Annette Black',name2:'Annette Black'},
+    {name:'Annette Black',name2:'Annette Black'},
+    {name:'Annette Black',name2:'Annette Black'},
 
+  ]
 }

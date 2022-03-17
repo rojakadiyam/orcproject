@@ -1,0 +1,29 @@
+<app-header-page></app-header-page>
+
+<div class="container-fluid px-4">
+    <div class="product-details-information">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="product-details-img">
+                    <p class="fs-18 f-700 pt-4 pb-3">Title</p>
+                    <img src="assets/images/product.png" class="w-100"/>
+                </div>
+            </div>
+
+            <div class="col-md-9 my-auto pt-5 px-4">
+                <div class="product-details-para pt-3">
+                    <p class="f-400 fs-18">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lobortis risus nisi quam sit. Fusce id
+                        leo pulvinar potenti vulputate. Iaculis viverra ac amet luctus dolor placerat molestie nunc ac.
+                        Arcu, nullam egestas velit non pharetra tempor condimentum maecenas. Non etiam arcu pellentesque
+                        volutpat ornare fermentum. Nibh leo ornare venenatis luctus.</p>
+                    <div class="product-details-lists d-flex justify-content-center" *ngFor="let list of list">
+                        <span class="right-list mb-3 f-500 f-16">{{list.lists}} :</span> <span class="left-list mb-3 px-4 f-500 f-16">{{list.lists}}</span>
+                    </div>
+                </div>
+               <div class="text-center py-5">
+                <button class="btn green-bg text-white" routerLink="/cart"><i class="fa fa-shopping-cart green-theem me-3"></i>Add to cart</button>
+               </div>
+            </div>
+        </div>
+    </div>
+</div>

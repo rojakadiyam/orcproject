@@ -1,0 +1,32 @@
+tr.student-table-header th {
+    background: #52A077;
+    padding: 1rem 0rem 1rem 2rem;
+    color: #ffff;
+    font-family: Roboto;
+    font-size: 16px;
+    border: 1px solid #52A077;
+    font-weight: 600;
+}
+.table> :not(:first-child) {
+    border-top: 0;
+}
+tr.student-table-data td {
+    padding: 1rem 0rem 1rem 2rem;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 29px;
+}
+button.new-btn {
+    width: 69px;
+    height: 30px;
+    background: #52A077;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+}
+.scrolling{
+    overflow: scroll;
+    height: 300px;
+    overflow-x: hidden;
+}

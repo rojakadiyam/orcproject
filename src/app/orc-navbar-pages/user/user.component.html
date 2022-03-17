@@ -1,0 +1,61 @@
+
+<app-header-page></app-header-page>
+<div class="container">
+ <div class="user-details">
+<p class="fs-20 f-500 pt-4 pb-3">Account Information</p>
+
+<div class="card">
+    <div class="card-header green-bg py-4 mb-3">
+     
+    </div>
+    <div class="card-body">
+     <div class="row">
+        <div class="col-md-5 px-5">
+            <p class="fs-14 f-400 pb-3">Organization :</p>
+            <p class="fs-14 f-400 pb-3">Email :</p>
+            <p class="fs-14 f-400 pb-3">Phone :</p>
+            <p class="fs-14 f-400 pb-3">Fax :</p>
+        </div>
+        <div class="col-md-6">
+            <p class="fs-14 f-400 pb-3">Account type :</p>
+            <p class="fs-14 f-400 pb-3">Title :</p>
+            <p class="fs-14 f-400 pb-3">District Number :</p>
+            <p class="fs-14 f-400 pb-3">ESD Number :</p>
+        </div>
+     </div>
+    </div>
+  </div>
+
+  <div class="cart-table-details pb-5">
+    <p class="f-500 pt-5 pb-2 fs-20">Order Histroy</p>
+    <div class="table-responsive rounded">
+        <table class="table border-radius border">
+            <thead class="table-light">
+                <tr class="cart-table-header">
+                    <th scope="col f-600 fs-18">Order no.</th>
+                    <th scope="col f-600 fs-18">Order Date</th>
+                    <th scope="col f-600 fs-18">Student</th>
+                    <th scope="col f-600 fs-18">Delivery address</th>
+                    <th scope="col f-600 fs-18">Order Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let data of tableData" class="cart-table-data">
+                    <td>{{data.name}}</td>
+                    <td>{{data.number}}</td>
+                    <td>{{data.address}}</td>
+                    <td>{{data.city}}</td>
+                    <td>{{data.state}}</td>
+                    
+                </tr>
+            </tbody>
+        </table>
+        <!-- <div class="float-end pt-3">
+            <button class="btn green-bg text-white me-3 px-4" routerLink="/shop">Continue Shopping</button>
+            <button class="btn green-bg text-white px-4" (click)="successOrder()">Submit Order</button>
+        </div> -->
+    </div>
+</div>
+
+ </div>
+</div>

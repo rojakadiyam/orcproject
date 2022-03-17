@@ -12,4 +12,13 @@ export class HeaderPageComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // <p>Annette Black</p>
+  // <p>6391 Elgin St. Celina, Delaware 10299</p>
+lists=[
+  {p1:'Annette Black',p2:'6391 Elgin St. Celina, Delaware 10299'},
+  {p1:'Annette Black',p2:'6391 Elgin St. Celina, Delaware 10299'},
+  {p1:'Annette Black',p2:'6391 Elgin St. Celina, Delaware 10299'},
+  {p1:'Annette Black',p2:'6391 Elgin St. Celina, Delaware 10299'},
+  {p1:'Annette Black',p2:'6391 Elgin St. Celina, Delaware 10299'},
+]
 }

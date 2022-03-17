@@ -2,18 +2,20 @@
 <app-header-page></app-header-page>
 <!---products details-->
 <section>
-    <div class="container">
+    <div class="container-fluid px-4">
       <div class="home-product-details">
         <div class="home-product-header pt-4">
-          <h5>Recently added books <span class="float-end"><a href="">see all</a></span></h5>
+          <h4 class="fs-18 f-600">Recently added books <span class="float-end"><a class="see-all green-clr fs-18 f-400 text-decoration-underline">see all</a></span></h4>
         </div>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
-          <div class="col mb-4 pt-4" *ngFor="let data of cardData">
-            <div class="card shadow">
-              <img [src]="data.img" class="card-img-top" alt="...">
+          <div class="col mb-4 pt-3" *ngFor="let data of cardData">
+            <div class="card">
+              <img [src]="data.img" class="card-img-top" alt="img">
               <div class="card-body">
-                <h5>{{data.author}}</h5>
-                <p class="card-text">{{data.para}}</p>
+                <h5 class="f-500 fs-18">{{data.author}}<br>
+                  <p class="f-400 fs-14">(Consumable)</p>
+                </h5>
+                <p class="card-text fs-16 f-400">{{data.para}}</p>
               </div>
             </div>
           </div>
@@ -22,15 +24,17 @@
   
       <div class="home-product-details">
         <div class="home-product-header pt-4">
-          <h5>Recently added books <span class="float-end"><a href="">see all</a></span></h5>
+          <h4 class="fs-18 f-600">Recently added books <span class="float-end"><a href="#" class="see-all green-clr  pe-auto fs-18 f-400 text-decoration-underline">see all</a></span></h4>
         </div>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
-          <div class="col mb-4 pt-4" *ngFor="let data of cardData">
+          <div class="col mb-4 pt-3" *ngFor="let data of cardData">
             <div class="card">
-              <img [src]="data.img" class="card-img-top" alt="...">
+              <img [src]="data.img" class="card-img-top" alt="img">
               <div class="card-body">
-                <h5>{{data.author}}</h5>
-                <p class="card-text">{{data.para}}</p>
+                <h5 class="f-500 fs-18">{{data.author}}<br>
+                  <p class="f-400 fs-14">(Consumable)</p>
+                </h5>
+                <p class="card-text fs-16 f-400">{{data.para}}</p>
               </div>
             </div>
           </div>

@@ -11,7 +11,12 @@ import { InventoryComponent } from './orc-navbar-pages/inventory/inventory.compo
 import { StudentsComponent } from './orc-navbar-pages/students/students.component';
 import { ShopComponent } from './orc-navbar-pages/shop/shop.component';
 import { DownloadFormsComponent } from './orc-navbar-pages/download-forms/download-forms.component';
-
+import { LoginComponent } from './orc-navbar-pages/login/login.component';
+import { ShopProductDetailsComponent } from './orc-navbar-pages/shop/shop-product-details/shop-product-details.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { CartPageComponent } from './orc-navbar-pages/shop/cart-page/cart-page.component';
+import { NotificationsComponent } from './orc-navbar-pages/notifications/notifications.component';
+import { UserComponent } from './orc-navbar-pages/user/user.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,12 +25,17 @@ import { DownloadFormsComponent } from './orc-navbar-pages/download-forms/downlo
     InventoryComponent,
     StudentsComponent,
     ShopComponent,
-    DownloadFormsComponent
+    DownloadFormsComponent,
+    LoginComponent,
+    ShopProductDetailsComponent,
+    CartPageComponent,
+    NotificationsComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule,MatButtonModule
+    BrowserAnimationsModule,MatButtonModule,ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
