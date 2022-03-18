@@ -1,6 +1,6 @@
 tr.student-table-header th {
     background: #52A077;
-    padding: 1rem 0rem 1rem 2rem;
+   padding: 0.6rem 0rem 0.6rem 1rem;
     color: #ffff;
     font-family: Roboto;
     font-size: 16px;
@@ -11,15 +11,15 @@ tr.student-table-header th {
     border-top: 0;
 }
 tr.student-table-data td {
-    padding: 1rem 0rem 1rem 2rem;
+   padding: 0.6rem 0rem 0.6rem 1rem;
     font-family: Roboto;
     font-size: 14px;
     font-weight: 500;
     line-height: 29px;
 }
 button.new-btn {
-    width: 69px;
-    height: 30px;
+    // width: 69px;
+    // height: 30px;
     background: #52A077;
     border: none;
     border-radius: 6px;

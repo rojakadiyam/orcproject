@@ -13,11 +13,11 @@ export class HomePageComponent implements OnInit {
     constructor(){}
   
     cardData=[
-      {img:'assets/images/book1.png',author:'Author Name',para:'Some quick example text to build on the card title and make up the bulk of the cards content.'},
-      {img:'assets/images/book2.png',author:'Author Name',para:'Some quick example text to build on the card title and make up the bulk of the cards content.'},
-      {img:'assets/images/book3.png',author:'Author Name',para:'Some quick example text to build on the card title and make up the bulk of the cards content.'},
-      {img:'assets/images/book4.png',author:'Author Name',para:'Some quick example text to build on the card title and make up the bulk of the cards content.'},
-      {img:'assets/images/book5.png',author:'Author Name',para:'Some quick example text to build on the card title and make up the bulk of the cards content.'},
+      {img:'assets/images/book1.png',author:'Author Name',para:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. '},
+      {img:'assets/images/book2.png',author:'Author Name',para:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. '},
+      {img:'assets/images/book3.png',author:'Author Name',para:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. '},
+      {img:'assets/images/book4.png',author:'Author Name',para:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. '},
+      {img:'assets/images/book5.png',author:'Author Name',para:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. '},
        ]
 
   ngOnInit(): void {

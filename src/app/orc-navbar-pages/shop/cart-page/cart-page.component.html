@@ -3,7 +3,7 @@
 <div *ngIf="show">
     <div class="container">
         <div class="cart-table-details">
-            <p class="f-600 pt-5 pb-2 fs-20">Cart Items</p>
+            <p class="f-600 pt-3 pb-2 fs-20 f-poppins">Cart Items</p>
             <div class="table-responsive rounded">
                 <table class="table border-radius border">
                     <thead class="table-light">
@@ -20,22 +20,28 @@
                         <tr *ngFor="let data of tableData" class="cart-table-data">
                             <td>{{data.name}}</td>
                             <td>{{data.address}}</td>
-                            <td>{{data.city}}</td>
+                            <td>
+                                <div class="quantity">
+                                    <a href="#" class="quantity__minus"><span><i class="fa fa-caret-left"></i></span></a>
+                                    <input name="quantity" type="text" class="quantity__input" value="1">
+                                    <a href="#" class="quantity__plus"><span><i class="fa fa-caret-right"></i></span></a>
+                                  </div>
+                            </td>
                             <td>{{data.state}}</td>
                             <td><i class="fa fa-trash" data-bs-toggle="modal" data-bs-target="#exampleModal"></i></td>
                         </tr>
                     </tbody>
                 </table>
                 <div class="float-end pt-3">
-                    <button class="btn green-bg text-white me-3 px-4" routerLink="/shop">Continue Shopping</button>
-                    <button class="btn green-bg text-white px-4" (click)="successOrder()">Submit Order</button>
+                    <button class="btn green-bg text-white me-3 px-4 btn-sm" routerLink="/shop">Continue Shopping</button>
+                    <button class="btn green-bg text-white px-4 btn-sm" (click)="successOrder()">Submit Order</button>
                 </div>
             </div>
         </div>
 
 
-        <div class="cart-deliver-details py-5">
-            <p class="fs-20 f-600 pb-3">Deliver to</p>
+        <div class="cart-deliver-details py-2">
+            <p class="fs-20 f-600 pb-3 f-poppins">Deliver to</p>
 
             <div class="card">
 
@@ -44,7 +50,7 @@
                         <div class="col-md-10">
                             <div class="row">
                                 <div class="col-md-4 px-5">
-                                    <select class="form-select" aria-label="Default select example">
+                                    <select class="form-select fs-14 f-400" aria-label="Default select example">
                                         <option selected>Select Student</option>
                                         <option value="1">One</option>
                                         <option value="2">Two</option>
@@ -63,8 +69,8 @@
                                     </span>
 
 
-                                    <div class="py-5">
-                                        <button class="btn green-bg text-white px-4">Change</button>
+                                    <div class="py-3">
+                                        <button class="btn green-bg text-white px-4 btn-sm">Change</button>
                                     </div>
                                 </div>
                             </div>
@@ -137,8 +143,8 @@
         </div>
 
         <div class="float-end pt-3">
-            <button class="btn green-bg text-white me-3 px-4" routerLink="/shop"><i
-                    class="fa fa-shopping-cart green-theem me-3"></i>Continue Shopping</button>
+            <button class="btn green-bg text-white me-3 px-4 btn-sm" routerLink="/shop"><i
+                    class="fa fa-shopping-cart green-theem me-3 btn-sm"></i>Continue Shopping</button>
         </div>
     </div>
 </div>

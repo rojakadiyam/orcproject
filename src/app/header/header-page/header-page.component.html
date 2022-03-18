@@ -48,10 +48,12 @@
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
-    <div class="modal-content">
+    <div class="modal-content border-0">
       <div class="modal-header green-bg text-white">
         <p class="modal-title fs-18 f-500 my-auto">Select the address</p>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+        <i class="fa fa-times fs-20" aria-hidden="true" data-bs-dismiss="modal" aria-label="Close"></i>
+
       </div>
       <div class="modal-body">
         <div class="d-flex justify-content-around border-bottom border-2" *ngFor="let a of lists">
@@ -68,7 +70,7 @@
         </div>
       </div>
       <div class="apply-btn text-center pt-2 pb-4">
-        <button type="button" class="btn green-bg text-white px-5">Apply</button>
+        <button type="button" class="btn green-bg text-white px-5 btn-sm">Apply</button>
        
       </div>
     </div>
