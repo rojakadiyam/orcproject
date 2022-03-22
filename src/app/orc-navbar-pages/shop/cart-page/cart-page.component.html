@@ -17,18 +17,18 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr *ngFor="let data of tableData" class="cart-table-data">
-                            <td>{{data.name}}</td>
-                            <td>{{data.address}}</td>
+                        <tr *ngFor="let data of tableData" class="cart-table-data ">
+                            <td class="pt-3 pb-3">{{data.name}}</td>
+                            <td class="pt-3 pb-3">{{data.address}}</td>
                             <td>
                                 <div class="quantity">
-                                    <a href="#" class="quantity__minus"><span><i class="fa fa-caret-left"></i></span></a>
+                                    <a href="#" class="quantity__minus"><span><i class="fa fa-caret-left text-dark"></i></span></a>
                                     <input name="quantity" type="text" class="quantity__input" value="1">
-                                    <a href="#" class="quantity__plus"><span><i class="fa fa-caret-right"></i></span></a>
+                                    <a href="#" class="quantity__plus"><span><i class="fa fa-caret-right text-dark"></i></span></a>
                                   </div>
                             </td>
-                            <td>{{data.state}}</td>
-                            <td><i class="fa fa-trash" data-bs-toggle="modal" data-bs-target="#exampleModal"></i></td>
+                            <td class="pt-3 pb-3">{{data.state}}</td>
+                            <td class="pt-3 pb-3"><i class="fa fa-trash" style="color: #BBBBBB;" data-bs-toggle="modal" data-bs-target="#exampleModal"></i></td>
                         </tr>
                     </tbody>
                 </table>

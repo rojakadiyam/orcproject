@@ -36,9 +36,7 @@
 
 
 
-
-
-<div class="container">
+<div class="container" *ngIf="false">
     <div class="inventory-details d-flex justify-content-between  pt-4 border-bottom pb-2">
         <div class="de">
             <p class="fs-18 f-500">Description</p>
@@ -73,7 +71,38 @@
 </div>
 
 
-
+<div class="container" *ngIf="true">
+  <table class="table">
+    <thead class="table table-responsive">
+     <tr class="fs-16 f-500 inventory-details-table">
+       <th>Description</th>
+      <th>Student</th>
+      <th>Ordered Date</th>
+      <th>Status</th>
+      <th>Due Date</th>
+    
+     </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let d of order" class="inventory-data-table">
+        <td>
+          <div class="header-action-phone py-4">
+            <div class="icon">
+                <img src="assets/images/bk.png" class="w-100">
+            </div>
+            <div class="phone px-4">
+              <span class="name f-500 fs-16 pb-2">{{d.a1}}</span> <span  class="f-400 fs-16">{{d.a2}}</span>
+            </div>
+          </div>
+        </td>
+        <td class="fs-16 f-500" id="center">{{d.a3}}</td>
+        <td class="fs-16 f-500" id="center">{{d.a4}}</td>
+        <td class="fs-16 f-500" id="center">{{d.a5}}</td>
+        <td class="fs-16 f-500 red-clr" id="center">{{d.a6}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 
 
